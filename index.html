@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icon-logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <title>TITAN</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__top">
+                    <a class="header__top-logo" href=""><img src="./img/logo.svg" alt="logo"></a>
+                    <div class="header__top-burger" onclick="showMenu()">
+                        <div class="header__top-line"></div>
+                        <div class="header__top-line"></div>
+                        <div class="header__top-line"></div>
+                    </div>
+                </div>
+                <div class="header__content">
+                    <ul class="header__content-list header-list">
+                        <li class="header-list__item"><a class="header-list__link" href="">Услуги</a></li>
+                        <li class="header-list__item"><a class="header-list__link" href="">Команда</a></li>
+                        <li class="header-list__item"><a class="header-list__link" href="">Преимущества</a></li>
+                        <li class="header-list__item"><a class="header-list__link" href="">Проекты</a></li>
+                        <li class="header-list__item"><a class="header-list__link" href="">Вопросы</a></li>
+                    </ul>
+                    <div class="header__content-socials header-socials">
+                        <a href="tel:+73433735030" class="header-socials__phone">+7 (343) 373 50-30</a>
+                        <div class="header-socials__messengers">
+                            <a class="header-socials__telegram" href="">Telegram</a>
+                            <a class="header-socials__whatsapp" href="">WhatsApp</a>
+                        </div>
+                    </div>
+                    <a href="" class="header__content-profile header-profile">
+                        <div class="header-profile__image">
+                            <img class="header-profile__img" src="./img/personal-area.svg" alt="personal-area">
+                        </div>
+                        <p class="header-profile__paragraph">Войти <br>
+                            в личный кабинет</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal">
+        <div class="modal__wrap">
+            <form class="delivery__form" action="">
+                <p class="delivery__form-paragraph">01. Маршрут груза</p>
+                <div class="delivery__form-divide">
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input" type="text" name="NAME"
+                            placeholder="Откуда (город)" required="">
+                        <label class="delivery__form-label form-lable">Откуда (город)</label>
+                    </div>
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input" type="text" name="NAME"
+                            placeholder="Куда (город)" required="">
+                        <label class="delivery__form-label form-lable">Куда (город)</label>
+                    </div>
+                </div>
+                <div class="delivery__form-full">
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input" type="text" name="NAME"
+                            placeholder="Название груза" required="">
+                        <label class="delivery__form-label form-lable">Название груза</label>
+                    </div>
+                </div>
+                <p class="delivery__form-paragraph">02. Примерный вес и размер</p>
+                <div class="delivery__form-divide">
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input" type="text" name="NAME" placeholder="Вес"
+                            required="">
+                        <label class="delivery__form-label form-lable">Вес</label>
+                    </div>
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input" type="text" name="NAME" placeholder="Размер"
+                            required="">
+                        <label class="delivery__form-label form-lable">Размер</label>
+                    </div>
+                </div>
+                <p class="delivery__form-paragraph">03. Планируемая дата отправки</p>
+                <div class="delivery__form-full">
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input" type="text" name="NAME" placeholder="Дата"
+                            required="">
+                        <label class="delivery__form-label form-lable">Дата</label>
+                    </div>
+                </div>
+                <p class="delivery__form-paragraph">04. Ваш номер телефона</p>
+                <div class="delivery__form-full">
+                    <div class="delivery__form-field">
+                        <input class="delivery__form-input form-input form-input--phone" type="text" name="NAME"
+                            placeholder="Телефон" required="" maxlength="16">
+                        <label class="delivery__form-label form-lable">Телефон</label>
+                    </div>
+                </div>
+                <button class="delivery__form-button" type="submit">Оставить заявку
+                    <div class="delivery__form-image">
+                        <img class="delivery__form-img" src="./img/arrow-white.png" alt="">
+                    </div>
+                </button>
+            </form>
+            <div class="modal__image" onclick="closeModal('modal', 'active')">
+                <img class="modal__img" src="./img/cross.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section class="section-top">
+        <h1 class="section-top__title">Умная перевозка
+            любых грузов
+            по России и СНГ</h1>
+        <p class="section-top__devis"><span class="section-top__devis-target">Вы говорите что и куда везти.</span> Мы
+            доставляем
+            <span class="section-top__devis-span">в срок, без вашего участия и за оптимальную цену</span>
+        </p>
+        <button class="section-top__button" onclick="openModal('modal', 'active')">Рассчитать стоимость
+            <div class="section-top__button-image"><img class="section-top__button-img" src="./img/arrow.png"
+                    alt="arrow"></div>
+        </button>
+        <div class="section-top__images">
+            <div class="section-top__images-left">
+                <img class="section-top__images-img" src="./img/section-top/section-top-1.png" alt="section-top-img">
+            </div>
+            <div class="section-top__images-right">
+                <img class="section-top__images-img" src="./img/section-top/section-top-2.png" alt="section-top-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="transportation">
+        <div class="container">
+            <div class="transportation__numbers">
+                <div class="transportation__numbers-item">
+                    <p class="transportation__numbers-top"><span>с</span> 2015</p>
+                    <p class="transportation__numbers-bottom">года работаем</p>
+                </div>
+                <div class="transportation__numbers-line"></div>
+                <div class="transportation__numbers-item">
+                    <p class="transportation__numbers-top">>300 <span>тыс</span></p>
+                    <p class="transportation__numbers-bottom">тонн груза перевезено</p>
+                </div>
+                <div class="transportation__numbers-line"></div>
+                <div class="transportation__numbers-item">
+                    <p class="transportation__numbers-top">12 <span>лет</span></p>
+                    <p class="transportation__numbers-bottom">опыта в грузоперевозках</p>
+                </div>
+            </div>
+
+            <div class="transportation__type">
+                <h2 class="transportation__type-header"><span>Подберем</span> вид перевозки </h2>
+                <p class="transportation__type-characteristics">Учтем ваши пожелания и характеристики груза</p>
+                <div class="transportation__type-bloks">
+
+                    <div class="transportation__type-blok transportation__type-blok_wide">
+
+                        <div class="transportation__type-blok-top">
+                            <p class="transportation__type-blok-header">ftl перевозки.</p>
+                            <p class="transportation__type-blok-description">Весь автомобиль в вашем распоряжении</p>
+                            <div class="transportation__type-blok-red type-blok-red">
+                                <div class="type-blok-red__image">
+                                    <img src="./img/transportation/Clock.svg " alt="">
+                                </div>
+                                <p class="type-blok-red__paragraph">Когда важны сроки</p>
+                            </div>
+                        </div>
+
+                        <div class="transportation__type-blok-bottom type-blok-bottom">
+                            <div class="type-blok-bottom__item">Негабаритные партии товара</div>
+                            <div class="type-blok-bottom__item">Срочные перевозки</div>
+                            <div class="type-blok-bottom__item">Ценные и хрупкие грузы</div>
+                        </div>
+
+                        <div class="transportation__type-blok-image">
+                            <img class="transportation__type-blok-img" src="./img/transportation/cargo.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="transportation__type-blok">
+
+                        <div class="transportation__type-blok-top">
+                            <p class="transportation__type-blok-header">ltl перевозки.</p>
+                            <p class="transportation__type-blok-description">Товар поедет с грузом других клиентов</p>
+                            <div class="transportation__type-blok-red type-blok-red">
+                                <div class="type-blok-red__image">
+                                    <img src="./img/transportation/Discount.svg" alt="">
+                                </div>
+                                <p class="type-blok-red__paragraph">Когда хочется сэкономить</p>
+                            </div>
+                        </div>
+
+                        <div class="transportation__type-blok-bottom type-blok-bottom">
+                            <div class="type-blok-bottom__item">Мелкие и средние партии</div>
+                            <div class="type-blok-bottom__item">Регулярные отправки</div>
+                            <div class="type-blok-bottom__item">Когда груз не к спеху</div>
+                        </div>
+
+                        <div class="transportation__type-blok-image">
+                            <img class="transportation__type-blok-img" src="./img/transportation/boxes.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="transportation__type-blok ">
+
+                        <div class="transportation__type-blok-top">
+                            <p class="transportation__type-blok-header">режимные грузы.</p>
+                            <p class="transportation__type-blok-description">Создадим температурные условия (от -18℃ до
+                                +20℃)</p>
+                            <div class="transportation__type-blok-red type-blok-red">
+                                <div class="type-blok-red__image">
+                                    <img src="./img/transportation/Shield.svg" alt="">
+                                </div>
+                                <p class="type-blok-red__paragraph">Когда нужен «особый режим»</p>
+                            </div>
+                        </div>
+
+                        <div class="transportation__type-blok-bottom type-blok-bottom">
+                            <div class="type-blok-bottom__item">Лекарства</div>
+                            <div class="type-blok-bottom__item">Замороженные продукты</div>
+                            <div class="type-blok-bottom__item">Скоропортящиеся товары</div>
+                        </div>
+
+                        <div class="transportation__type-blok-image">
+                            <img class="transportation__type-blok-img" src="./img/transportation/fresh.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="transportation__type-blok transportation__type-blok_wide">
+
+                        <div class="transportation__type-blok-top">
+                            <p class="transportation__type-blok-header">Негабаритные грузы.</p>
+                            <p class="transportation__type-blok-description">Перевезем груз нестандартного размера и
+                                веса</p>
+                            <div class="transportation__type-blok-red type-blok-red">
+                                <div class="type-blok-red__image">
+                                    <img src="./img/transportation/Shopping.svg" alt="">
+                                </div>
+                                <p class="type-blok-red__paragraph">Нестандарт по весу и размеру</p>
+                            </div>
+                        </div>
+
+                        <div class="transportation__type-blok-bottom type-blok-bottom">
+                            <div class="type-blok-bottom__item">Строительная техника</div>
+                            <div class="type-blok-bottom__item">Промышленное оборудование</div>
+                            <div class="type-blok-bottom__item">Строительные элементы</div>
+                        </div>
+
+                        <div class="transportation__type-blok-image">
+                            <img class="transportation__type-blok-img" src="./img/transportation/forklift.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="transportation__type-blok transportation__type-blok_big">
+
+                        <div class="transportation__type-blok-wrap">
+                            <div class="transportation__type-blok-top">
+                                <p class="transportation__type-blok-header">труднодоступные регионы.</p>
+                                <p class="transportation__type-blok-description">Отвезем груз даже в труднодоступные
+                                    регионы</p>
+                                <div class="transportation__type-blok-red type-blok-red">
+                                    <div class="type-blok-red__image">
+                                        <img src="./img/transportation/Discover.svg" alt="">
+                                    </div>
+                                    <p class="type-blok-red__paragraph">Хоть на «край света»</p>
+                                </div>
+                            </div>
+
+                            <div class="transportation__type-blok-bottom type-blok-bottom">
+                                <div class="type-blok-bottom__item">ЯНАО</div>
+                                <div class="type-blok-bottom__item">Красноярский край</div>
+                                <div class="type-blok-bottom__item">Иркутская область</div>
+                                <div class="type-blok-bottom__item">Сахалин</div>
+                                <div class="type-blok-bottom__item">и другие...</div>
+                            </div>
+                        </div>
+
+                        <div class="transportation__type-blok-image">
+                            <img class="transportation__type-blok-img" src="./img/transportation/truck.png" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="transportation__type-slider">
+                    <h2 class="transportation__type-slider-header">За вас <span>выберем</span> машину</h2>
+                    <p class="transportation__type-slider-paragraph">Более 100 типов кузовов под ваши задачи</p>
+                    <div class="transportation__type-slider-wrap">
+                        <div class="transportation__type-slider-buttons">
+                            <div id="slider-button-left" class="transportation__type-slide-button">
+                                < </div>
+                                    <div id="slider-button-right" class="transportation__type-slide-button"> > </div>
+                            </div>
+                            <div class="transportation__type-slider-content">
+                                <div class="transportation__type-slider-container">
+                                    <div class="transportation__type-slide type-slide">
+                                        <div class="type-slide__image">
+                                            <img class="type-slide__img" src="./img/track/track-1.png" alt="">
+                                        </div>
+                                        <div class="type-slide__text">
+                                            <h4 class="type-slide__text-header">еврофура.</h4>
+                                            <p class="type-slide__text-paragraph">Оптимальна для небольших
+                                                расстояний</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="transportation__type-slide type-slide">
+                                        <div class="type-slide__image">
+                                            <img class="type-slide__img" src="./img/track/track-2.png" alt="">
+                                        </div>
+                                        <div class="type-slide__text">
+                                            <h4 class="type-slide__text-header">jumbo.</h4>
+                                            <p class="type-slide__text-paragraph">Для габаритных грузов на большие
+                                                расстояния</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="transportation__type-slide type-slide">
+                                        <div class="type-slide__image">
+                                            <img class="type-slide__img" src="./img/track/track-3.png" alt="">
+                                        </div>
+                                        <div class="type-slide__text">
+                                            <h4 class="type-slide__text-header">трал или открытая
+                                                платформа.</h4>
+                                            <p class="type-slide__text-paragraph">Для негабаритных и тяжелых грузов:
+                                                спецтехника, оборудование</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="transportation__type-slide type-slide">
+                                        <div class="type-slide__image">
+                                            <img class="type-slide__img" src="./img/track/track-4.png" alt="">
+                                        </div>
+                                        <div class="type-slide__text">
+                                            <h4 class="type-slide__text-header">рефрижераторный
+                                                фургон.</h4>
+                                            <p class="type-slide__text-paragraph">Для лекарств, продуктов (в т.ч.
+                                                замороженных)
+                                                на большие расстояния</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="transportation__type-slide type-slide">
+                                        <div class="type-slide__image">
+                                            <img class="type-slide__img" src="./img/track/track-5.png" alt="">
+                                        </div>
+                                        <div class="type-slide__text">
+                                            <h4 class="type-slide__text-header">Изотермический
+                                                фургон.</h4>
+                                            <p class="type-slide__text-paragraph">Для продуктов и других капризных
+                                                товаров
+                                                на расстоянии до 100 км</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="transportation__type-slide type-slide">
+                                        <div class="type-slide__image">
+                                            <img class="type-slide__img" src="./img/track/track-6.png" alt="">
+                                        </div>
+                                        <div class="type-slide__text">
+                                            <h4 class="type-slide__text-header">автосцепка.</h4>
+                                            <p class="type-slide__text-paragraph">Для перевозок объемного нетяжелого
+                                                груза</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button class="transportation__type-slider-button"
+                            onclick="openModal('modal', 'active')">Рассчитать
+                            стоимость
+                            <div class="transportation__type-slider-button-image">
+                                <img class="transportation__type-slider-button-img" src="./img/arrow-white.png" alt="">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="organization">
+
+        <div class="container">
+            <h2 class="organization__header">Все организуем <br>
+                и решим форс-мажоры</h2>
+            <p class="organization__description">Больше не нужно продумывать все до мелочей и переживать.
+                Над вашей задачей в Титане работает целая команда</p>
+            <div class="organization__team">
+                <div class="organization__team-image"><img class="organization__team-img"
+                        src="./img/organization/hand.png" alt=""></div>
+                <p class="organization__team-paragraph">Слаженная командная работа</p>
+            </div>
+
+            <div class="organization__bloks">
+                <div class="organization__blok">
+                    <div class="organization__blok-top">
+                        <div class="organization__blok-top-photo">
+                            <img src="./img/organization/organization-photo-1.png" alt="">
+                        </div>
+                        <div class="organization__blok-top-text">
+                            <p class="organization__blok-top-header">менеджеры.</p>
+                            <p class="organization__blok-top-paragraph">@ваши_помощники</p>
+                        </div>
+                        <div class="organization__blok-top-icons">
+                            <img class="organization__blok-top-icon" src="./img/organization/organization-icon-1.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="organization__blok-description">
+                        Сэкономят вам время и силы. Все сделают
+                        за вас: <span>согласуют адреса, габариты, решат форс-мажорную ситуацию</span>
+                    </div>
+                </div>
+
+                <div class="organization__blok">
+                    <div class="organization__blok-top">
+                        <div class="organization__blok-top-photo">
+                            <img src="./img/organization/organization-photo-2.png" alt="">
+                        </div>
+                        <div class="organization__blok-top-text">
+                            <p class="organization__blok-top-header">Логисты.</p>
+                            <p class="organization__blok-top-paragraph">@эксперты_со_стажем</p>
+                        </div>
+                        <div class="organization__blok-top-icons">
+                            <img class="organization__blok-top-icon" src="./img/organization/organization-icon-2.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="organization__blok-description">
+                        Знают, где и как можно сэкономить. <span>Подберут оптимальный маршрут
+                            и транспорт, которые вас удовлетворят</span>
+                    </div>
+                </div>
+
+                <div class="organization__blok">
+                    <div class="organization__blok-top">
+                        <div class="organization__blok-top-photo">
+                            <img src="./img/organization/organization-photo-3.png" alt="">
+                        </div>
+                        <div class="organization__blok-top-text">
+                            <p class="organization__blok-top-header">бухгалтерия.</p>
+                            <p class="organization__blok-top-paragraph">@гибкие_и_лояльные</p>
+                        </div>
+                        <div class="organization__blok-top-icons">
+                            <img class="organization__blok-top-icon" src="./img/organization/organization-icon-3.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="organization__blok-description">
+                        Знаем, как вам важны документы: <span>срочно и «именно в таком виде»</span>. С нашими
+                        бухгалтерами все будет
+                        «по полочкам»
+                    </div>
+                </div>
+
+                <div class="organization__blok organization__blok_wide">
+                    <div class="organization__blok-top">
+                        <div class="organization__blok-top-photo">
+                            <img src="./img/organization/organization-photo-4.png" alt="">
+                        </div>
+                        <div class="organization__blok-top-text">
+                            <p class="organization__blok-top-header">профессиональная бригада.</p>
+                            <p class="organization__blok-top-paragraph">@заботливые_руки</p>
+                        </div>
+                        <div class="organization__blok-top-icons">
+                            <img class="organization__blok-top-icon" src="./img/organization/organization-icon-4.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="organization__blok-description">
+                        Обращаются с грузом, как со своим. <span>Аккуратно и бережно погрузят, закрепят и
+                            разгрузят</span>. Обладают
+                        навыками, чтобы эффективно выполнить свою работу
+                    </div>
+                </div>
+
+                <div class="organization__blok organization__blok_wide">
+                    <div class="organization__blok-top">
+                        <div class="organization__blok-top-photo">
+                            <img src="./img/organization/organization-photo-5.png" alt="">
+                        </div>
+                        <div class="organization__blok-top-text">
+                            <p class="organization__blok-top-header">Водители-экспедиторы.</p>
+                            <p class="organization__blok-top-paragraph">@прирожденные_мастера</p>
+                        </div>
+                        <div class="organization__blok-top-icons">
+                            <img class="organization__blok-top-icon" src="./img/organization/organization-icon-5.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="organization__blok-description">
+                        <span>Доставят ваш груз вовремя и в сохранности</span>.
+                        Проконтролируют процесс перевозки груза, включая оформление необходимых документов
+                    </div>
+                </div>
+            </div>
+
+            <button class="organization__button">
+                Спросить совета
+                <div class="organization__button-image">
+                    <img class="organization__button-img" src="./img/arrow.png" alt="">
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <section class="maximum">
+        <div class="container">
+            <h2 class="maximum__header">Клиенты получают <br>
+                максимум от работы с нами</h2>
+            <p class="maximum__paragraph">Все, с кем мы работали, остались довольны качеством
+                наших услуг и профессионализмом нашей команды</p>
+            <div class="maximum__bloks">
+                <div class="maximum__blok">
+                    <img src="./img/maximum/maximum-desc-1.png" alt="" class="maximum__blok-img">
+                    <img src="./img/maximum/maximum-mobile-1.png" alt="" class="maximum__blok-img-mobile">
+                </div>
+
+                <div class="maximum__blok">
+                    <img src="./img/maximum/maximum-desc-2.png" alt="" class="maximum__blok-img">
+                    <img src="./img/maximum/maximum-mobile-2.png" alt="" class="maximum__blok-img-mobile">
+                </div>
+
+                <div class="maximum__blok">
+                    <img src="./img/maximum/maximum-desc-3.png" alt="" class="maximum__blok-img">
+                    <img src="./img/maximum/maximum-mobile-3.png" alt="" class="maximum__blok-img-mobile">
+                </div>
+
+                <div class="maximum__blok">
+                    <img src="./img/maximum/maximum-desc-4.png" alt="" class="maximum__blok-img">
+                    <img src="./img/maximum/maximum-mobile-4.png" alt="" class="maximum__blok-img-mobile">
+                </div>
+            </div>
+            <div class="maximum__cargo">
+                <img class="maximum__cargo-img" src="./img/maximum/cargo_truck.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="all-in-one">
+        <div class="all-in-one__top">
+            <div class="container">
+                <div class="all-in-one__text">
+                    <h2 class="all-in-one__text-header">Все <span>в одном</span>
+                        месте</h2>
+                    <p class="all-in-one__text-paragraph">У вас появится личный кабинет, где будет храниться
+                        информация по перевозкам</p>
+                    <div class="all-in-one__controls">
+                        <div class="all-in-one__control active">
+                            <h4>01. История заказов</h4>
+                        </div>
+                        <div class="all-in-one__control">
+                            <h4>02. Пакет документов </h4>
+                            <p>(бухгалтерские документы,
+                                товарно-транспортные накладные)</p>
+                        </div>
+                        <div class="all-in-one__control">
+                            <h4>03. Фотоотчеты</h4>
+                            <p>(погрузочно-разгрузочных работ)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-in-one__slider">
+                <div class="all-in-one__slider-macbook">
+                    <img src="./img/notebook/MacBook.png" alt="">
+                </div>
+                <div class="all-in-one__slider-screen slider-screen">
+                    <div class="slider-screen__image slider-screen__image_active">
+                        <img src="./img/notebook/screen.png" alt="">
+                    </div>
+                    <div class="slider-screen__image">
+                        <img src="./img/notebook/screen.png" alt="">
+                    </div>
+                    <div class="slider-screen__image">
+                        <img src="./img/notebook/screen.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="all-in-one__mobile-slider mobile-slider">
+                <div class="mobile-slider__screen">
+                    <div class="mobile-slider__image mobile-slider__image_active">
+                        <img class="mobile-slider__img" src="./img/notebook/screen.png" alt="">
+                    </div>
+                    <div class="mobile-slider__image">
+                        <img class="mobile-slider__img" src="./img/notebook/screen.png" alt="">
+                    </div>
+                    <div class="mobile-slider__image">
+                        <img class="mobile-slider__img" src="./img/notebook/screen.png" alt="">
+                    </div>
+                </div>
+                <div class="mobile-slider__controls">
+                    <div class="mobile-slider__controls-left">
+                        <div class="mobile-slider__controls-text mobile-slider__controls-text_active">
+                            <h4>01. История заказов</h4>
+                        </div>
+                        <div class="mobile-slider__controls-text">
+                            <h4>02. Пакет документов </h4>
+                            <p>(бухгалтерские документы, 
+                                товарно-транспортные накладные)</p>
+                        </div>
+                        <div class="mobile-slider__controls-text">
+                            <h4>03. Фотоотчеты</h4>
+                            <p>(погрузочно-разгрузочных работ)</p>
+                        </div>
+                    </div>
+                    <div class="mobile-slider__controls-right">
+                        <div class="mobile-slider__control-left"><</div>
+                        <div class="mobile-slider__control-right">></div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-in-one__boxes">
+                <div class="all-in-one__box">
+                    <img class="all-in-one__box-img" src="./img/notebook/boxes.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="all-in-one__line"></div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2 class="projects__headr">наши проекты</h2>
+            <p class="projects__paragraph">Это более 1000 направлений, включая труднодоступные регионы</p>
+            <div class="projects__map">
+                <img src="./img/map.svg" alt="">
+            </div>
+            <div class="projects__tickets">
+
+                <div class="projects__ticket">
+                    <div class="projects__ticket-left">
+                        <div class="projects__ticket-left-top">
+                            <div class="projects__ticket-start">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/moscow.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">москва</p>
+                            </div>
+                            <div class="projects__ticket-start-line"></div>
+                            <div class="projects__ticket-end">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Yamalo-Nenets.png"
+                                        alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">ямало-ненецкий ао</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__ticket-left-bottom ticket-left-bottom">
+                            <div class="ticket-left-bottom__text">Описание</div>
+                            <div class="ticket-left-bottom__description">Экстремальная доставка продуктов
+                                питания на зимники вахтовых поселков </div>
+                        </div>
+
+                    </div>
+                    <div class="projects__ticket-right ticket-right">
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-distance">Расстояние</p>
+                            <p class="ticket-right__param-km">3 600<span>км</span></p>
+                        </div>
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-term">Срок</p>
+                            <p class="ticket-right__param-day">5<span>дней</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects__ticket">
+                    <div class="projects__ticket-left">
+                        <div class="projects__ticket-left-top">
+                            <div class="projects__ticket-start">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Ekaterinburg.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">екатеринбург</p>
+                            </div>
+                            <div class="projects__ticket-start-line"></div>
+                            <div class="projects__ticket-end">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Magadan.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">магадан</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__ticket-left-bottom ticket-left-bottom">
+                            <div class="ticket-left-bottom__text">Описание</div>
+                            <div class="ticket-left-bottom__description">Доставка нестандартных по длине
+                                (до 50 метров) опор освещения</div>
+                        </div>
+
+                    </div>
+                    <div class="projects__ticket-right ticket-right">
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-distance">Расстояние</p>
+                            <p class="ticket-right__param-km">8 400<span>км</span></p>
+                        </div>
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-term">Срок</p>
+                            <p class="ticket-right__param-day">13<span>дней</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects__ticket">
+                    <div class="projects__ticket-left">
+                        <div class="projects__ticket-left-top">
+                            <div class="projects__ticket-start">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/moscow.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">москва</p>
+                            </div>
+                            <div class="projects__ticket-start-line"></div>
+                            <div class="projects__ticket-end">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Petropavlovsk.png"
+                                        alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">петропавловск-камчатский</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__ticket-left-bottom ticket-left-bottom">
+                            <div class="ticket-left-bottom__text">Описание</div>
+                            <div class="ticket-left-bottom__description">Доставка вышек сотовой связи</div>
+                        </div>
+
+                    </div>
+                    <div class="projects__ticket-right ticket-right">
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-distance">Расстояние</p>
+                            <p class="ticket-right__param-km">12 000<span>км</span></p>
+                        </div>
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-term">Срок</p>
+                            <p class="ticket-right__param-day">12<span>дней</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects__ticket">
+                    <div class="projects__ticket-left">
+                        <div class="projects__ticket-left-top">
+                            <div class="projects__ticket-start">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Krasnodar.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">краснодар</p>
+                            </div>
+                            <div class="projects__ticket-start-line"></div>
+                            <div class="projects__ticket-end">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Naryan-mar.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">нарьян-мар</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__ticket-left-bottom ticket-left-bottom">
+                            <div class="ticket-left-bottom__text">Описание</div>
+                            <div class="ticket-left-bottom__description">Антенно-мачтовое оборудование
+                                для ПАО «Мегафон»</div>
+                        </div>
+
+                    </div>
+                    <div class="projects__ticket-right ticket-right">
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-distance">Расстояние</p>
+                            <p class="ticket-right__param-km">3 700<span>км</span></p>
+                        </div>
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-term">Срок</p>
+                            <p class="ticket-right__param-day">4<span>дней</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects__ticket">
+                    <div class="projects__ticket-left">
+                        <div class="projects__ticket-left-top">
+                            <div class="projects__ticket-start">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/moscow.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">москва</p>
+                            </div>
+                            <div class="projects__ticket-start-line"></div>
+                            <div class="projects__ticket-end">
+                                <div class="projects__ticket-city">
+                                    <img class="projects__ticket-city-img" src="./img/projects/Yakutia.png" alt="">
+                                </div>
+                                <p class="projects__ticket-city-name">Якутия</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__ticket-left-bottom ticket-left-bottom">
+                            <div class="ticket-left-bottom__text">Описание</div>
+                            <div class="ticket-left-bottom__description">Доставка продуктов питания на зимники
+                                вахтовых поселков</div>
+                        </div>
+
+                    </div>
+                    <div class="projects__ticket-right ticket-right">
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-distance">Расстояние</p>
+                            <p class="ticket-right__param-km">8 500<span>км</span></p>
+                        </div>
+                        <div class="ticket-right__param">
+                            <p class="ticket-right__param-term">Срок</p>
+                            <p class="ticket-right__param-day">11<span>дней</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects__buttons">
+                <div class="projects__buttons-left">
+                    <span>Загрузить еще</span>
+                </div>
+                <a href="#form_bottom" class="projects__buttons-right">
+                    Спланировать маршрут
+                    <div class="projects__buttons-image">
+                        <img class="projects__buttons-img" src="./img/arrow.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="questions">
+        <div class="container">
+            <h2 class="questions__header"><span>Частые</span> вопросы</h2>
+            <div class="questions__spoilers">
+
+                <div class="questions__spoiler">
+                    <div class="questions__spoiler-top">
+                        <p class="questions__spoiler-header">Из чего складывается стоимость грузоперевозки?</p>
+                        <div class="questions__spoiler-image">
+                            <img class="questions__spoiler-cross" src="./img/cross.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="questions__spoiler-bottom">
+                        <p class="questions__spoiler-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Voluptates iusto nostrum nobis molestiae quod impedit consectetur, rerum similique voluptate
+                            voluptatem aliquid et distinctio, sed aspernatur asperiores quae tempore. Quisquam, iusto?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="questions__spoiler">
+                    <div class="questions__spoiler-top">
+                        <p class="questions__spoiler-header">А можно скидку или подешевле?</p>
+                        <div class="questions__spoiler-image">
+                            <img class="questions__spoiler-cross" src="./img/cross.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="questions__spoiler-bottom">
+                        <p class="questions__spoiler-text">Позвоните/напишите нам, мы в индивидуальном порядке подберем
+                            для вас выгодные условия перевозки.
+                            К тому же мы готовы предоставить отсрочку платежа или кешбэк</p>
+                    </div>
+                </div>
+
+                <div class="questions__spoiler">
+                    <div class="questions__spoiler-top">
+                        <p class="questions__spoiler-header">Если груз повредится в процессе перевозки, кто несет
+                            ответственность?</p>
+                        <div class="questions__spoiler-image">
+                            <img class="questions__spoiler-cross" src="./img/cross.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="questions__spoiler-bottom">
+                        <p class="questions__spoiler-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery">
+        <div class="container">
+            <h2 class="delivery__header">Обратитесь <span>к экспертам</span></h2>
+            <p class="delivery__paragraph">Ответьте на пару вопросов, и мы перезвоним уже с расчетом</p>
+            <div class="delivery__wrap">
+                <div class="delivery__left">
+                    <form id="form_bottom" class="delivery__form" action="">
+                        <p class="delivery__form-paragraph">01. Маршрут груза</p>
+                        <div class="delivery__form-divide">
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input" type="text" name="NAME"
+                                    placeholder="Откуда (город)" required="">
+                                <label class="delivery__form-label form-lable">Откуда (город)</label>
+                            </div>
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input" type="text" name="NAME"
+                                    placeholder="Куда (город)" required="">
+                                <label class="delivery__form-label form-lable">Куда (город)</label>
+                            </div>
+                        </div>
+                        <div class="delivery__form-full">
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input" type="text" name="NAME"
+                                    placeholder="Название груза" required="">
+                                <label class="delivery__form-label form-lable">Название груза</label>
+                            </div>
+                        </div>
+                        <p class="delivery__form-paragraph">02. Примерный вес и размер</p>
+                        <div class="delivery__form-divide">
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input" type="text" name="NAME" placeholder="Вес"
+                                    required="">
+                                <label class="delivery__form-label form-lable">Вес</label>
+                            </div>
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input" type="text" name="NAME"
+                                    placeholder="Размер" required="">
+                                <label class="delivery__form-label form-lable">Размер</label>
+                            </div>
+                        </div>
+                        <p class="delivery__form-paragraph">03. Планируемая дата отправки</p>
+                        <div class="delivery__form-full">
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input" type="text" name="NAME"
+                                    placeholder="Дата" required="">
+                                <label class="delivery__form-label form-lable">Дата</label>
+                            </div>
+                        </div>
+                        <p class="delivery__form-paragraph">04. Ваш номер телефона</p>
+                        <div class="delivery__form-full">
+                            <div class="delivery__form-field">
+                                <input class="delivery__form-input form-input form-input--phone" type="text" name="NAME"
+                                    placeholder="Телефон" required="">
+                                <label class="delivery__form-label form-lable">Телефон</label>
+                            </div>
+                        </div>
+                        <button class="delivery__form-button" type="submit">Оставить заявку
+                            <div class="delivery__form-image">
+                                <img class="delivery__form-img" src="./img/arrow-white.png" alt="">
+                            </div>
+                        </button>
+                    </form>
+                </div>
+                <div class="delivery__right">
+                    <div class="delivery__right-image">
+                        <img class="delivery__right-img" src="./img/delivery_man.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__information">
+                    <div class="footer__information-left">
+                        <div class="footer__information-logo"><img src="./img/logo.svg" alt="logo"></div>
+                        <div class="footer__information-text">
+                            <p>Политика конфиденциальности</p>
+                            <p>©2024 ТК «Титан»</p>
+                        </div>
+                    </div>
+                    <div class="footer__information-right">
+                        <div class="footer__information-adress">
+                            <h4>Адрес</h4>
+                            <p>620085, г. Екатеринбург,
+                                ул. 8 марта, 194, оф. 30 (сек. Е)</p>
+                        </div>
+                        <div class="footer__information-time">
+                            <h4>Работаем</h4>
+                            <p>ПН-СБ<br>
+                                с 08:00 до 21:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__contacts-wrap">
+                        <div class="footer__contacts-content">
+                            <h4 class="footer__contacts-title">Мы всегда <br>
+                                на связи!</h4>
+                            <a class="footer__contacts-link" href="tel:+7 (343) 373 50-30">+7 (343) 373 50-30</a>
+                        </div>
+                        <div class="footer__contacts-content">
+                            <h4 class="footer__contacts-title">Наша почта
+                                тоже работает :) </h4>
+                            <a class="footer__contacts-link" href="mailto:info@tk-titan.com">info@tk-titan.com</a>
+                        </div>
+                    </div>
+                    <div class="footer__contacts-socials">
+                        <a class="footer__contacts-telegram" href="">Telegram</a>
+                        <a class="footer__contacts-whatsapp" href="">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./scipt.js"></script>
+</body>
+
+</html>

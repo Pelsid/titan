@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icon-logo.png">
+    <title>TITAN - Личный кабинет</title>
+</head>
+
+<body>
+
+    <div class="map">
+        <div class="map__sidebar">
+            <div class="map__sidebar-logo">
+                <img class="map__sidebar-logo-img" src="./img/map/logo.png" alt="">
+            </div>
+            <div class="map__sidebar-bottom">
+                <div class="map__sidebar-avatar">
+                    <img class="map__sidebar-avatar-img" src="./img/map/Ellipse 71.png" alt="">
+                </div>
+                <div class="map__sidebar-exit">
+                    <img class="map__sidebar-exit-img" src="./img/map/Vector.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="map__search">
+            <h1 class="map__search-header">Маршруты доставки</h1>
+            <div class="map__search-input-wrap">
+                <div class="map__search-magnifying ">
+                    <img class="map__search-magnifying-img" src="./img/map/Vector (1).png" alt="">
+                </div>
+                <input class="map__search-input" type="text" placeholder="Поиск">
+            </div>
+            <div class="map__search-date search-date">
+
+                <div class="search-date__wrap">
+                    <p class="search-date__text">01 марта — 25 марта</p>
+                    <div class="search-date__cross">
+                        <img class="search-date__cross-img" src="./img/cross.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="search-date__wrap">
+                    <p class="search-date__text">Завершенные</p>
+                    <div class="search-date__cross">
+                        <img class="search-date__cross-img" src="./img/cross.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="search-date__wrap">
+                    <p class="search-date__text">Москва – Якутия</p>
+                    <div class="search-date__cross">
+                        <img class="search-date__cross-img" src="./img/cross.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="map__search-blocks">
+
+                <div class="map__search-block map__search-block_blue search-block">
+                    <div class="search-block__top">
+                        <div class="search-block__top-param top-param">
+                            <h4 class="top-param__header">Номер заказа</h4>
+                            <p class="top-param__number">#221212212323</p>
+                            <p class="top-param__cargo">Дерево</p>
+                        </div>
+                        <div class="search-block__top-stat">
+                            <div class="search-block__top-stat-text search-block__top-stat-text_way">
+                                В пути
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-block__bottom-information bottom-information">
+                        <div class="bottom-information__point">
+                            <div class="bottom-information__point-left">
+                                <div class="bottom-information__point-left-circle">
+                                    <i></i>
+                                </div>
+                                <div class="bottom-information__point-left-text point-left-text">
+                                    <p class="point-left-text__top">Санкт-Петербург</p>
+                                    <p class="point-left-text__bottom">ул. Пушкина, д. 234</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-information__point-right">
+                                <p class="bottom-information__point-right-top">12 марта</p>
+                                <p class="bottom-information__point-right-bottom">10:23</p>
+                            </div>
+                        </div>
+
+                        <div class="bottom-information__point">
+                            <div class="bottom-information__point-left">
+                                <div class="bottom-information__point-left-circle">
+                                    <img src="./img/map/Location Pin.png" alt="">
+                                </div>
+                                <div class="bottom-information__point-left-text point-left-text">
+                                    <p class="point-left-text__top">Ямало-Ненецкий АО</p>
+                                    <p class="point-left-text__bottom">ул. Ленина, д. 854</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-information__point-right">
+                                <p class="bottom-information__point-right-top">19 марта</p>
+                                <p class="bottom-information__point-right-bottom">12:06</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-block__mobile">
+                        <div class="search-block__mobile-map">
+
+                        </div>
+                        <div class="search-block__mobile-information mobile-information">
+                            <div class="mobile-information__params">
+                                <h4 class="mobile-information__params-header">Общая информация</h4>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Водитель</p>
+                                    <p class="mobile-information__params-right">Иванов Иван Иваныч</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Дата погрузки</p>
+                                    <p class="mobile-information__params-right">11 марта 2024</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Дата разгрузки</p>
+                                    <p class="mobile-information__params-right">17 марта 2024</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Стоимость</p>
+                                    <p class="mobile-information__params-right">80 000 Р</p>
+                                </div>
+                            </div>
+                            <div class="mobile-information__documents">
+                                <h4 class="mobile-information__documents-header">Документы</h4>
+                                <div class="mobile-information__documents-liks">
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map__search-block search-block">
+                    <div class="search-block__top">
+                        <div class="search-block__top-param top-param">
+                            <h4 class="top-param__header">Номер заказа</h4>
+                            <p class="top-param__number">#221212212323</p>
+                            <p class="top-param__cargo">Дерево</p>
+                        </div>
+                        <div class="search-block__top-stat">
+                            <div class="search-block__top-stat-text search-block__top-stat-text_processing">
+                                В обработке
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-block__bottom-information bottom-information">
+                        <div class="bottom-information__point">
+                            <div class="bottom-information__point-left">
+                                <div class="bottom-information__point-left-circle">
+                                    <i></i>
+                                </div>
+                                <div class="bottom-information__point-left-text point-left-text">
+                                    <p class="point-left-text__top">Санкт-Петербург</p>
+                                    <p class="point-left-text__bottom">ул. Пушкина, д. 234</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-information__point-right">
+                                <p class="bottom-information__point-right-top">12 марта</p>
+                                <p class="bottom-information__point-right-bottom">10:23</p>
+                            </div>
+                        </div>
+
+                        <div class="bottom-information__point">
+                            <div class="bottom-information__point-left">
+                                <div class="bottom-information__point-left-circle">
+                                    <img src="./img/map/Location Pin.png" alt="">
+                                </div>
+                                <div class="bottom-information__point-left-text point-left-text">
+                                    <p class="point-left-text__top">Ямало-Ненецкий АО</p>
+                                    <p class="point-left-text__bottom">ул. Ленина, д. 854</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-information__point-right">
+                                <p class="bottom-information__point-right-top">19 марта</p>
+                                <p class="bottom-information__point-right-bottom">12:06</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-block__mobile">
+                        <div class="search-block__mobile-map">
+
+                        </div>
+                        <div class="search-block__mobile-information mobile-information">
+                            <div class="mobile-information__params">
+                                <h4 class="mobile-information__params-header">Общая информация</h4>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Водитель</p>
+                                    <p class="mobile-information__params-right">Иванов Иван Иваныч</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Дата погрузки</p>
+                                    <p class="mobile-information__params-right">11 марта 2024</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Дата разгрузки</p>
+                                    <p class="mobile-information__params-right">17 марта 2024</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Стоимость</p>
+                                    <p class="mobile-information__params-right">80 000 Р</p>
+                                </div>
+                            </div>
+                            <div class="mobile-information__documents">
+                                <h4 class="mobile-information__documents-header">Документы</h4>
+                                <div class="mobile-information__documents-liks">
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map__search-block search-block">
+                    <div class="search-block__top">
+                        <div class="search-block__top-param top-param">
+                            <h4 class="top-param__header">Номер заказа</h4>
+                            <p class="top-param__number">#221212212323</p>
+                            <p class="top-param__cargo">Дерево</p>
+                        </div>
+                        <div class="search-block__top-stat">
+                            <div class="search-block__top-stat-text search-block__top-stat-text_not-finished">
+                                Не завершен
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-block__bottom-information bottom-information">
+                        <div class="bottom-information__point">
+                            <div class="bottom-information__point-left">
+                                <div class="bottom-information__point-left-circle">
+                                    <i></i>
+                                </div>
+                                <div class="bottom-information__point-left-text point-left-text">
+                                    <p class="point-left-text__top">Санкт-Петербург</p>
+                                    <p class="point-left-text__bottom">ул. Пушкина, д. 234</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-information__point-right">
+                                <p class="bottom-information__point-right-top">12 марта</p>
+                                <p class="bottom-information__point-right-bottom">10:23</p>
+                            </div>
+                        </div>
+
+                        <div class="bottom-information__point">
+                            <div class="bottom-information__point-left">
+                                <div class="bottom-information__point-left-circle">
+                                    <img src="./img/map/Location Pin.png" alt="">
+                                </div>
+                                <div class="bottom-information__point-left-text point-left-text">
+                                    <p class="point-left-text__top">Ямало-Ненецкий АО</p>
+                                    <p class="point-left-text__bottom">ул. Ленина, д. 854</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-information__point-right">
+                                <p class="bottom-information__point-right-top">19 марта</p>
+                                <p class="bottom-information__point-right-bottom">12:06</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-block__mobile">
+                        <div class="search-block__mobile-map">
+
+                        </div>
+                        <div class="search-block__mobile-information mobile-information">
+                            <div class="mobile-information__params">
+                                <h4 class="mobile-information__params-header">Общая информация</h4>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Водитель</p>
+                                    <p class="mobile-information__params-right">Иванов Иван Иваныч</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Дата погрузки</p>
+                                    <p class="mobile-information__params-right">11 марта 2024</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Дата разгрузки</p>
+                                    <p class="mobile-information__params-right">17 марта 2024</p>
+                                </div>
+                                <div class="mobile-information__params-wrap">
+                                    <p class="mobile-information__params-left">Стоимость</p>
+                                    <p class="mobile-information__params-right">80 000 Р</p>
+                                </div>
+                            </div>
+                            <div class="mobile-information__documents">
+                                <h4 class="mobile-information__documents-header">Документы</h4>
+                                <div class="mobile-information__documents-liks">
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                    <a class="mobile-information__documents-link" href="">
+                                        <div class="mobile-information__documents-pdf">
+                                            <img src="./img/map/pngwing 1.png" alt="">
+                                        </div>
+                                        <span>Название документа длинное</span>
+                                        <div class="mobile-information__documents-link-download">
+                                            <img src="./img/map/Vector (4).png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="map__location">
+            <p class="map__location-number">Номер заказа</p>
+            <p class="map__location-numbers">#221212212323</p>
+            <div class="map__location-content">
+
+            </div>
+            <div class="map__location-information location-information">
+                <div class="location-information__left">
+                    <div class="location-information__left-header">
+                        <p>Общая информация</p>
+                    </div>
+                    <div class="location-information__left-param left-param">
+                        <div class="left-param__wrap">
+                            <div class="left-param__wrap-icon">
+                                <img class="left-param__wrap-img" src="./img/map/Vector (2).png" alt="">
+                            </div>
+                            <p class="left-param__wrap-set">Водитель</p>
+                            <p class="left-param__wrap-value">Иванов Иван Иванович</p>
+                        </div>
+
+                        <div class="left-param__wrap">
+                            <div class="left-param__wrap-icon">
+                                <img class="left-param__wrap-img" src="./img/map/Vector (3).png" alt="">
+                            </div>
+                            <p class="left-param__wrap-set">Стоимость</p>
+                            <p class="left-param__wrap-value">80 000 </p>
+                        </div>
+
+                        <div class="left-param__wrap">
+                            <div class="left-param__wrap-icon">
+                                <img class="left-param__wrap-img" src="./img/arrow.png" alt="">
+                            </div>
+                            <p class="left-param__wrap-set">Дата погрузки</p>
+                            <p class="left-param__wrap-value">11 марта 2024 года</p>
+                        </div>
+
+                        <div class="left-param__wrap">
+                            <div class="left-param__wrap-icon">
+                                <img class="left-param__wrap-img left-param__wrap-img_rotate" src="./img/arrow.png"
+                                    alt="">
+                            </div>
+                            <p class="left-param__wrap-set">Дата разгрузки</p>
+                            <p class="left-param__wrap-value">17 марта 2024 года</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-information__right">
+                    <div class="location-information__right-header">
+                        <p>Документы</p>
+                    </div>
+                    <div class="location-information__right-ducuments right-ducuments">
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Название документа длинное </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Название документа длинное </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Транспортная накладная </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Транспортная накладная </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Документ 2 </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Документ 2 </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Раз два три документ </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+
+                        <a class="right-ducuments__link" href="">
+                            <div class="right-ducuments__link-image">
+                                <img class="right-ducuments__link-img" src="./img/map/pngwing 1.png" alt="">
+                            </div>
+                            <span>Раз два три документ </span>
+                            <div class="right-ducuments__link-down">
+                                <img class="right-ducuments__link-down-img" src="./img/map/Vector (4).png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./scipt.js"></script>
+</body>
+
+</html>
